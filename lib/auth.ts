@@ -47,5 +47,10 @@ export const authOptions: NextAuthOptions = {
         signIn: "/auth/signin",
         // verifyRequest: '/auth/verify-request', 
     },
+    events: {
+        async signIn(message) {
+            console.log("User signed in success/fail:", message);
+        },
+    },
     debug: true,
 };
